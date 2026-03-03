@@ -3,6 +3,11 @@ import numpy as np
 import json
 from datetime import datetime, timedelta
 
+"""
+Business Intelligence Data Engine
+Generates synthetic e-commerce data and calculates key business metrics.
+"""
+
 # Set seed for reproducibility
 np.random.seed(42)
 
@@ -12,11 +17,12 @@ num_orders = 3000
 start_date = datetime(2025, 1, 1)
 end_date = datetime(2025, 12, 31)
 
-# Generate Customers
+# Generate synthetic Customer base
 customers = [f"C{i:04d}" for i in range(num_customers)]
+# Assign random join dates within the first 180 days of the year
 customer_join_dates = {c: start_date + timedelta(days=np.random.randint(0, 180)) for c in customers}
 
-# Generate Orders
+# Generate transactional Order data
 order_data = []
 for _ in range(num_orders):
     customer = np.random.choice(customers)
@@ -37,6 +43,7 @@ for _ in range(num_orders):
 df = pd.DataFrame(order_data)
 
 # --- KPI Calculations ---
+# Aggregate metrics across the entire dataset
 total_revenue = df['amount'].sum()
 unique_customers = df['customer_id'].nunique()
 total_orders = len(df)
@@ -62,6 +69,7 @@ kpis = {
 }
 
 # --- Cohort Analysis ---
+# Grouping customers by their acquisition month to track longitudinal behavior
 def get_month(x): return datetime(x.year, x.month, 1)
 df['order_month'] = df['order_date'].apply(get_month)
 grouping = df.groupby('customer_id')['order_month']
