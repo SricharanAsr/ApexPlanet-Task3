@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import './index.css';
+import { motion } from 'framer-motion';
 import {
   TrendingUp,
   Users,
@@ -8,8 +8,10 @@ import {
   UserMinus,
   BarChart3
 } from 'lucide-react';
-import { motion } from 'framer-motion';
+
+// Assets and Styles
 import analysisData from '../../analysis_results.json';
+import './index.css';
 
 const KPICard = ({ title, value, icon: Icon, delay }) => (
   <motion.div
