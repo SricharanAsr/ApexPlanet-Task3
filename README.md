@@ -1,6 +1,6 @@
 # Deep-Dive Analysis & Interactive Dashboarding
 
-This project features a comprehensive business analysis dashboard built with **React, Vite, and Framer Motion**, powered by a data generation and analysis engine in **Python**.
+This repository hosts a high-performance business intelligence solution composed of a robust Python-based data engine and a modern React dashboard. It is designed to provide clear, actionable insights through longitudinal cohort analysis and real-time KPI tracking.
 
 ## Project Components
 
