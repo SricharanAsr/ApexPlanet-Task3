@@ -1,22 +1,24 @@
 import React, { useMemo } from 'react';
 import './index.css';
-import { 
-  TrendingUp, 
-  Users, 
-  ShoppingBag, 
-  DollarSign, 
-  UserMinus, 
-  BarChart3 
+import {
+  TrendingUp,
+  Users,
+  ShoppingBag,
+  DollarSign,
+  UserMinus,
+  BarChart3
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import analysisData from '../../analysis_results.json';
 
 const KPICard = ({ title, value, icon: Icon, delay }) => (
-  <motion.div 
+  <motion.div
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ delay }}
     className="glass-card kpi-card"
+    role="region"
+    aria-label={`${title} metric`}
   >
     <div className="flex justify-between items-start">
       <div className="p-2 rounded-lg bg-indigo-500/10 text-indigo-400">
@@ -62,9 +64,9 @@ const CohortHeatmap = ({ retentionData }) => {
                 {indices.map(i => {
                   const val = row.data[i];
                   return (
-                    <td 
-                      key={i} 
-                      style={{ 
+                    <td
+                      key={i}
+                      style={{
                         backgroundColor: getColor(val),
                         color: val > 60 ? '#fff' : 'var(--text-main)',
                         opacity: val ? 1 : 0.2
@@ -104,10 +106,10 @@ function App() {
 
       <div className="dashboard-grid">
         {formattedKPIs.map((kpi, idx) => (
-          <KPICard 
-            key={kpi.title} 
-            {...kpi} 
-            delay={idx * 0.1} 
+          <KPICard
+            key={kpi.title}
+            {...kpi}
+            delay={idx * 0.1}
           />
         ))}
       </div>
