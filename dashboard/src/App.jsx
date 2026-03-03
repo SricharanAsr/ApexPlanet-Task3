@@ -13,6 +13,9 @@ import {
 import analysisData from '../../analysis_results.json';
 import './index.css';
 
+const formatCurrency = (value) =>
+  new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(value);
+
 const KPICard = ({ title, value, icon: Icon, delay }) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
@@ -92,10 +95,10 @@ function App() {
   const { kpis, retention } = analysisData;
 
   const formattedKPIs = [
-    { title: 'Total Revenue', value: `$${kpis.total_revenue.toLocaleString()}`, icon: DollarSign },
+    { title: 'Total Revenue', value: formatCurrency(kpis.total_revenue), icon: DollarSign },
     { title: 'Total Orders', value: kpis.total_orders.toLocaleString(), icon: ShoppingBag },
     { title: 'Unique Customers', value: kpis.unique_customers.toLocaleString(), icon: Users },
-    { title: 'Avg Order Value', value: `$${kpis.aov}`, icon: TrendingUp },
+    { title: 'Avg Order Value', value: formatCurrency(kpis.aov), icon: TrendingUp },
     { title: 'Conversion Rate', value: `${kpis.conversion_rate}%`, icon: BarChart3 },
     { title: 'Churn Rate', value: `${kpis.churn_rate}%`, icon: UserMinus },
   ];
