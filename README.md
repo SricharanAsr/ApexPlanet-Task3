@@ -16,6 +16,14 @@ This repository hosts a high-performance business intelligence solution composed
 - **Cohort Heatmap:** Interactive visualization of customer retention patterns.
 - **Responsive:** Optimized for diverse screen sizes.
 
+## Key Technical Features
+
+- **Glassmorphism UI:** Modern aesthetic using advanced CSS backdrop filters and gradients.
+- **Micro-Animations:** Fluid state transitions powered by `framer-motion`.
+- **Type Safety (Logic):** Python backend utilizes type hinting for robust data processing.
+- **Dynamic Heatmapping:** React-based cohort visualization that handles variable data indices.
+- **Scalable Architecture:** Separate data and presentation layers for easy updates.
+
 ## How to Run
 
 ### Prerequisite: Python
