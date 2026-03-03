@@ -12,24 +12,26 @@ Generates synthetic e-commerce data and calculates key business metrics.
 np.random.seed(42)
 
 # Configuration
-num_customers = 500
-num_orders = 3000
-start_date = datetime(2025, 1, 1)
-end_date = datetime(2025, 12, 31)
+NUM_CUSTOMERS = 500
+NUM_ORDERS = 3000
+START_DATE = datetime(2025, 1, 1)
+END_DATE = datetime(2025, 12, 31)
+CHURN_THRESHOLD_DAYS = 60
+ACQUISITION_WINDOW_DAYS = 180
 
 # Generate synthetic Customer base
-customers = [f"C{i:04d}" for i in range(num_customers)]
+customers = [f"C{i:04d}" for i in range(NUM_CUSTOMERS)]
 # Assign random join dates within the first 180 days of the year
-customer_join_dates = {c: start_date + timedelta(days=np.random.randint(0, 180)) for c in customers}
+customer_join_dates = {c: START_DATE + timedelta(days=np.random.randint(0, ACQUISITION_WINDOW_DAYS)) for c in customers}
 
 # Generate transactional Order data
 order_data = []
-for _ in range(num_orders):
+for _ in range(NUM_ORDERS):
     customer = np.random.choice(customers)
     join_date = customer_join_dates[customer]
     
     # Orders can only happen after join date
-    days_since_join = np.random.randint(0, (end_date - join_date).days + 1)
+    days_since_join = np.random.randint(0, (END_DATE - join_date).days + 1)
     order_date = join_date + timedelta(days=days_since_join)
     
     amount = np.random.uniform(20, 500)
@@ -54,9 +56,9 @@ total_visitors = unique_customers * 1.5
 conversion_rate = (unique_customers / total_visitors) * 100
 
 # Churn Rate Mock (simplified)
-# Let's say churned are those who haven't ordered in the last 60 days of the year
+# Let's say churned are those who haven't ordered in the last threshold of the year
 last_date = df['order_date'].max()
-recent_customers = df[df['order_date'] >= (last_date - timedelta(days=60))]['customer_id'].unique()
+recent_customers = df[df['order_date'] >= (last_date - timedelta(days=CHURN_THRESHOLD_DAYS))]['customer_id'].unique()
 churn_rate = ((unique_customers - len(recent_customers)) / unique_customers) * 100
 
 kpis = {
