@@ -1,9 +1,9 @@
 # Deep-Dive Analysis: Customer Retention & Cohort Study
 
-## Objective
-To analyze customer retention patterns and business health through core KPIs and a longitudinal cohort study.
+## 1. Project Objective and Scope
+To analyze customer retention patterns and business health through core KPIs and a longitudinal cohort study of transition behavior.
 
-## Core KPIs Defined
+## 2. Core Business KPIs: Definitions & Insights
 
 1. **Conversion Rate (CR):** 66.67%
    - *Formula:* (Unique Customers / Total Visitors) * 100
@@ -22,8 +22,7 @@ To analyze customer retention patterns and business health through core KPIs and
 
 ---
 
-## Deep-Dive: Cohort Analysis (Retention)
-
+## 3. Deep-Dive: Longitudinal Cohort Analysis
 The cohort analysis groups customers by their first purchase month (2025-01 through 2025-11) and tracks their return rate over subsequent months (Month 1 to Month 12).
 
 ### Key Findings:
@@ -32,5 +31,8 @@ The cohort analysis groups customers by their first purchase month (2025-01 thro
 - **Top Performer:** The 2025-01 cohort showed a remarkable peak of 56.52% retention in Month 5.
 - **Trend:** There is a slight upward trend in Month 2 retention for later cohorts (e.g., 2025-07 cohort at 63.49% in Month 2), suggesting improved onboarding or product-market fit.
 
-## Dashboard Visualization
+## 4. Methodology
+The data was synthesized using a Monte Carlo approach to simulate realistic e-commerce behavior, ensuring variance in order frequency and basket size. Retention is calculated using the triangle-heatmap approach common in SaaS analytics.
+
+## 5. Dashboard Visualization
 The interactive dashboard provides a real-time heatmap of these cohorts, allowing stakeholders to identify "leaky" months and optimize re-engagement campaigns.
