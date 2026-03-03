@@ -50,5 +50,12 @@ This repository hosts a high-performance business intelligence solution composed
 ## Findings Summary
 Check the [Deep_Dive_Report.md](./Deep_Dive_Report.md) for a detailed breakdown of the business insights and cohort analysis results.
 
+## Future Enhancements
+
+- **Real-time Data Integration:** Connect to live SQL/NoSQL databases.
+- **Advanced Predictive Analytics:** Implement LTV (Lifetime Value) forecasting.
+- **Additional Visualizations:** Add trend lines and categorical breakdown charts.
+- **Export Capabilities:** Allow stakeholders to download PDF reports directly from the dashboard.
+
 ---
 *Created by Apex Software Solutions*
