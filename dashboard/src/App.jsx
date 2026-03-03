@@ -15,6 +15,7 @@ const KPICard = ({ title, value, icon: Icon, delay }) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
+    whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
     transition={{ delay }}
     className="glass-card kpi-card"
     role="region"
