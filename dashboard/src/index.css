@@ -3,13 +3,18 @@
   --glass-border: rgba(255, 255, 255, 0.1);
   --glass-blur: blur(12px);
   --primary: #6366f1;
+  --primary-glow: rgba(99, 102, 241, 0.5);
   --secondary: #ec4899;
   --accent: #10b981;
+  --bg-dark: #0f172a;
   --bg-gradient: radial-gradient(circle at top left, #0f172a, #1a1a2e, #111827);
   --text-main: #f8fafc;
   --text-muted: #94a3b8;
   --spacing-base: 1rem;
   --spacing-lg: 2rem;
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.3);
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
 }
 
 body {
