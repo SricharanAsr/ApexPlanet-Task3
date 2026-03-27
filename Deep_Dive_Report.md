@@ -35,4 +35,10 @@ The cohort analysis groups customers by their first purchase month (2025-01 thro
 The data was synthesized using a Monte Carlo approach to simulate realistic e-commerce behavior, ensuring variance in order frequency and basket size. Retention is calculated using the triangle-heatmap approach common in SaaS analytics.
 
 ## 5. Dashboard Visualization
-The interactive dashboard provides a real-time heatmap of these cohorts, allowing stakeholders to identify "leaky" months and optimize re-engagement campaigns.
+## 6. Future Improvements
+- **Real-Time Integration:** Transition from static JSON to a live API (e.g., FastAPI + PostgreSQL).
+- **Advanced Predictive Analytics:** Implement LTV (Lifetime Value) forecasting using the existing cohort data.
+- **Enhanced Visualizations:** Add trend lines for KPI metrics over time and categorical breakdown charts (e.g., Sales by Region).
+
+## 7. Conclusion
+The current analysis reveals a robust business model with high customer intent (CR) and a healthy loyal base (Stable Retention). However, the ~31% churn rate in the final quarter suggests a need for targeted re-engagement campaigns for older cohorts. Integrating real-time data will be the next step in evolving this into a full-scale BI platform.
