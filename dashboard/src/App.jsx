@@ -12,9 +12,7 @@ import {
 // Assets and Styles
 import analysisData from '../../analysis_results.json';
 import './index.css';
-
-const formatCurrency = (value) =>
-  new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(value);
+import { formatCurrency } from './utils/helpers';
 
 const KPICard = ({ title, value, icon: Icon, delay }) => (
   <motion.div
