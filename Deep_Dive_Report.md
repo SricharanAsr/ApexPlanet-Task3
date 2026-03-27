@@ -5,20 +5,20 @@ To analyze customer retention patterns and business health through core KPIs and
 
 ## 2. Core Business KPIs: Definitions & Insights
 
-1. **Conversion Rate (CR):** 66.67%
-   - *Formula:* (Unique Customers / Total Visitors) * 100
-   - *Rationale:* Measures how effectively the platform turns interest into transactions. A 66%+ rate indicates high intent or a highly optimized funnel.
+1.  **Conversion Rate (CR):** `66.67%`
+    -   *Formula:* `(Unique Customers / Total Visitors) * 100`
+    -   *Insight:* Measures how effectively the platform turns interest into transactions. A 66%+ rate indicates high intent or a highly optimized funnel.
 
-2. **Average Order Value (AOV):** $259.08
-   - *Formula:* Total Revenue / Total Orders
-   - *Rationale:* Critical for understanding customer spending power and pricing strategy.
+2.  **Average Order Value (AOV):** `$259.08`
+    -   *Formula:* `Total Revenue / Total Orders`
+    -   *Insight:* Critical for understanding customer spending power and pricing strategy.
 
-3. **Customer Churn Rate:** 31.06%
-   - *Formula:* (Customers lost / Total Customers) * 100
-   - *Rationale:* Indicates the percentage of customers who stopped purchasing in the final 60 days of the analysis period.
+3.  **Customer Churn Rate:** `31.06%`
+    -   *Formula:* `(Customers lost / Total Customers) * 100`
+    -   *Insight:* Indicates the percentage of customers who stopped purchasing in the final 60 days of the analysis period.
 
-4. **Total Revenue:** $777,242.12
-   - *Rationale:* The primary top-line metric indicating overall business scale.
+4.  **Total Revenue:** `$777,242.12`
+    -   *Insight:* The primary top-line metric indicating overall business scale.
 
 ---
 
