@@ -91,6 +91,10 @@ const CohortHeatmap = ({ retentionData }) => {
   );
 };
 
+/**
+ * Main Application Component for the ApexPlanet Dashboard.
+ * Renders the KPI overview and cohort analysis heatmap.
+ */
 function App() {
   const { kpis, retention } = analysisData;
 
