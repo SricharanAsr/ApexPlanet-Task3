@@ -6,7 +6,7 @@ import {
   ShoppingBag,
   DollarSign,
   UserMinus,
-  BarChart3
+  BarChart3,
 } from 'lucide-react';
 
 // Assets and Styles
