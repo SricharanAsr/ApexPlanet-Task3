@@ -73,6 +73,7 @@ kpis = {
 # --- Cohort Analysis ---
 # Grouping customers by their acquisition month to track longitudinal behavior
 def get_month(x: datetime) -> datetime: 
+    """Returns the first day of the month for a given datetime."""
     return datetime(x.year, x.month, 1)
 
 df['order_month'] = df['order_date'].apply(get_month)
@@ -80,6 +81,7 @@ grouping = df.groupby('customer_id')['order_month']
 df['cohort_month'] = grouping.transform('min')
 
 def get_date_int(df: pd.DataFrame, column: str) -> tuple[pd.Series, pd.Series]:
+    """Extracts year and month as integers from a datetime column."""
     year = df[column].dt.year
     month = df[column].dt.month
     return year, month
