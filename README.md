@@ -37,7 +37,23 @@ This repository features state-of-the-art Python-driven data processing paired w
 
 ## 🔒 Key Technical Features
 
-## How to Run
+## 📂 Project Structure
+
+```
+.
+├── dashboard/               # Frontend React Application
+│   ├── src/                 # Source components and logic
+│   ├── public/              # Static assets
+│   └── index.html           # Main entry point
+├── generate_data.py         # Python data processing engine
+├── analysis_results.json    # Processed analytics data
+├── Deep_Dive_Report.md      # Detailed business findings
+└── README.md                # Project documentation
+```
+
+---
+
+## 🚀 How to Run
 
 ### Prerequisite: Python
 1. Ensure you have Python installed.
