@@ -18,13 +18,24 @@ This repository features state-of-the-art Python-driven data processing paired w
 - **Cohort Heatmap:** Interactive visualization of customer retention patterns.
 - **Responsive:** Optimized for diverse screen sizes.
 
-## Key Technical Features
+## 🛠️ Tech Stack
 
-- **Glassmorphism UI:** Modern aesthetic using advanced CSS backdrop filters and gradients.
-- **Micro-Animations:** Fluid state transitions powered by `framer-motion`.
-- **Type Safety (Logic):** Python backend utilizes type hinting for robust data processing.
-- **Dynamic Heatmapping:** React-based cohort visualization that handles variable data indices.
-- **Scalable Architecture:** Separate data and presentation layers for easy updates.
+### Frontend
+- **React 18** - UI Library
+- **Vite** - Build Tool
+- **Tailwind CSS** - Styling (Utilized for specific components)
+- **Framer Motion** - Animations
+- **Lucide React** - Iconography
+
+### Backend (Data Intelligence)
+- **Python 3.x** - Core Logic
+- **Pandas** - Data Manipulation
+- **NumPy** - Numerical Operations
+- **JSON** - Data Exchange Format
+
+---
+
+## 🔒 Key Technical Features
 
 ## How to Run
 
